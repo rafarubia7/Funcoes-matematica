@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Função Quadrática</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="function.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Função Quadrática</h1>
+            <div class="formula">f(x) = ax² + bx + c</div>
+        </header>
+        
+        <div class="card">
+            <h2>Insira os Coeficientes</h2>
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="coef-a">a:</label>
+                    <input type="number" id="coef-a" step="0.1" value="1">
+                </div>
+                <div class="input-container">
+                    <label for="coef-b">b:</label>
+                    <input type="number" id="coef-b" step="0.1" value="0">
+                </div>
+                <div class="input-container">
+                    <label for="coef-c">c:</label>
+                    <input type="number" id="coef-c" step="0.1" value="-1">
+                </div>
+                <button id="calculate-btn" class="btn">Calcular</button>
+                <button id="reset-btn" class="btn btn-reset">Limpar</button>
+            </div>
+            
+            <div class="result-section">
+                <h2>Resultados</h2>
+                
+                <div class="result-item">
+                    <span class="result-label">Função:</span>
+                    <span class="result-value" id="function-display">f(x) = 1x² + 0x + (-1)</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Condição de existência:</span>
+                    <span class="result-value" id="existence-condition">Satisfeita (a = 1 ≠ 0)</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Discriminante (Δ):</span>
+                    <span class="result-value" id="delta">Δ = 4</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Raízes:</span>
+                    <span class="result-value" id="roots">x₁ = 1, x₂ = -1</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Vértice:</span>
+                    <span class="result-value" id="vertex">V = (0, -1)</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Interseção com eixo Y:</span>
+                    <span class="result-value" id="y-intercept">(0, -1)</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Concavidade:</span>
+                    <span class="result-value" id="concavity">Voltada para cima</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Gráfico da Função</h2>
+            <div class="graph-container" id="graph-container"></div>
+            <div class="controls">
+                <div class="zoom-controls">
+                    <button id="zoom-in-btn" class="btn">Zoom +</button>
+                    <button id="zoom-out-btn" class="btn">Zoom -</button>
+                    <button id="reset-zoom-btn" class="btn">Reset Zoom</button>
+                </div>
+                <div class="color-controls">
+                    <label for="graph-color">Cor do gráfico:</label>
+                    <input type="color" id="graph-color" value="#3498db">
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Passo a Passo</h2>
+            <div class="steps-section" id="steps-container">
+                <!-- Os passos serão preenchidos pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
