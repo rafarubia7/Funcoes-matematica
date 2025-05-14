@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // e.preventDefault();
         
         // Navega para a página da calculadora
-        window.location.href = '../Calculadora/index.html';
+        window.location.href = 'index.html';
     });
 });
